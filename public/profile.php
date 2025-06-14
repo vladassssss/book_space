@@ -5,16 +5,11 @@ ini_set('display_errors', 1);
 ini_set('display_startup_errors', 1);
 error_reporting(E_ALL);
 
-// Manual includes for critical classes to ensure they are available
 require_once __DIR__ . '/../app/Database/Connection.php';
 
-// Profile related classes (for ordered books and genre stats)
 require_once __DIR__ . '/../app/Repositories/ProfileRepository.php';
 require_once __DIR__ . '/../app/Services/ProfileService.php';
-// You might remove ProfileController if it's not used elsewhere or its responsibilities are split
-// require_once __DIR__ . '/../app/Controllers/ProfileController.php'; 
 
-// Wishlist related classes (for favorite books)
 require_once __DIR__ . '/../app/Repositories/IBookstoreRepository.php'; // Required by WishlistRepository
 require_once __DIR__ . '/../app/Repositories/BookstoreRepository.php'; // Required by WishlistRepository
 require_once __DIR__ . '/../app/Repositories/IWishlistRepository.php';
@@ -22,10 +17,9 @@ require_once __DIR__ . '/../app/Repositories/WishlistRepository.php';
 require_once __DIR__ . '/../app/Services/IWishlistService.php';
 require_once __DIR__ . '/../app/Services/WishlistService.php';
 
-// Models
 require_once __DIR__ . '/../app/Models/User.php';
 require_once __DIR__ . '/../app/Models/Book.php';
-require_once __DIR__ . '/../app/Models/WishlistItem.php'; // Make sure this is included for Wishlist logic
+require_once __DIR__ . '/../app/Models/WishlistItem.php'; 
 
 require_once __DIR__ . '/../app/Models/CartItem.php';
 require_once __DIR__ . '/../app/Repositories/ICartRepository.php';
@@ -37,7 +31,6 @@ use App\Repositories\CartRepository;
 use App\Services\CartService;
 use App\Controllers\CartController;
 
-// Автозавантаження класів (якщо воно працює коректно, більшість з require_once вище стануть надлишковими)
 spl_autoload_register(function ($class) {
     $prefix = 'App\\';
     $base_dir = __DIR__ . '/../app/';
@@ -57,15 +50,15 @@ spl_autoload_register(function ($class) {
 use App\Database\Connection;
 use App\Repositories\ProfileRepository;
 use App\Services\ProfileService;
-// use App\Controllers\ProfileController; // Only if you still use it for non-wishlist profile data
+
 
 use App\Repositories\BookstoreRepository;
 use App\Repositories\WishlistRepository;
 use App\Services\WishlistService;
-// use App\Models\WishlistItem; // Not directly used here, but good to ensure it's available
+
 
 if (!isset($_SESSION['user_id'])) {
-    header('Location: login.php'); // Redirect if user is not authenticated
+    header('Location: login.php'); 
     exit;
 }
 
@@ -83,21 +76,12 @@ try {
     $db->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
     $db->exec("set names utf8");
 
-    // Initialize ProfileService for ordered books and genre stats
     $profileRepository = new ProfileRepository($db);
     $profileService = new ProfileService($profileRepository);
-    // If you used ProfileController, you'd call it here:
-    // $profileController = new ProfileController($profileService);
-    // $profileData = $profileController->getUserProfileData($userId);
-
-    // Assuming ProfileService can directly give ordered books and genre stats
-    // You might need to adjust methods in ProfileService to directly return these
     $profileData = $profileService->getUserProfileData($userId); // Get all profile data
     $orderedBooks = $profileData['ordered_books'] ?? [];
     $genreStats = $profileData['genre_stats'] ?? [];
 
-
-    // Initialize WishlistService for favorite books
     $bookstoreRepository = new BookstoreRepository($db); // WishlistRepository requires BookstoreRepository
     $wishlistRepository = new WishlistRepository($db, $bookstoreRepository);
     $wishlistService = new WishlistService($wishlistRepository);
@@ -105,8 +89,6 @@ try {
     // Get favorite books from WishlistService
     $favoriteBooks = $wishlistService->getUserWishlist($userId);
 
-
-    // --- Aggregation for favorite books genre stats ---
     $favoriteGenreStats = [];
     foreach ($favoriteBooks as $book) { // $book is expected to be a Book object
         $genre = $book->getGenre();
@@ -122,9 +104,7 @@ try {
             'count' => $count
         ];
     }
-    // --- End Aggregation ---
 
-    // Determine the most frequent genre for background (from ordered books)
     $maxQuantity = 0;
     foreach ($genreStats as $genreInfo) {
         if ($genreInfo['total_quantity'] > $maxQuantity) {
@@ -144,8 +124,7 @@ $cartItems = [];
 if (isset($_SESSION['user_id'])) {
     try {
         $cartRepository = new CartRepository($db);
-        // Ensure $bookstoreRepository is initialized BEFORE this line.
-        // It is, which is good!
+
         $cartService = new CartService($cartRepository, $bookstoreRepository); // <-- FIX APPLIED HERE!
         $cartController = new CartController($cartService);
         $cartItems = $cartController->fetchUserCart($_SESSION['user_id']);
@@ -162,7 +141,7 @@ if (isset($_SESSION['user_id'])) {
     <link rel="stylesheet" href="styles.css">
     <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
      <style>
-        /* Загальні стилі */
+
         
 
         .container {
@@ -171,7 +150,6 @@ if (isset($_SESSION['user_id'])) {
             padding: 0 20px;
         }
 
-        /* Header */
         header {
             background-color: #333;
             color: white;
@@ -202,7 +180,7 @@ if (isset($_SESSION['user_id'])) {
 
         nav ul.nav-left li {
             margin-right: 20px;
-            position: relative; /* Для сайдбару */
+            position: relative; 
         }
 
         nav ul.nav-left li a {
@@ -222,7 +200,6 @@ if (isset($_SESSION['user_id'])) {
             gap: 15px;
         }
 
-        /* Кнопка категорій (для сайдбару) */
         .category-button {
             background-color: #007bff;
             color: white;
@@ -238,10 +215,9 @@ if (isset($_SESSION['user_id'])) {
             background-color: #0056b3;
         }
 
-        /* Сайдбар */
         .sidebar {
             position: absolute;
-            top: 100%; /* Розміщуємо під кнопкою */
+            top: 100%; 
             left: 0;
             background-color: #f8f9fa;
             border: 1px solid #ddd;
@@ -286,7 +262,6 @@ if (isset($_SESSION['user_id'])) {
             color: #007bff;
         }
 
-        /* Пошукова форма */
         .search-form {
             display: flex;
             border-radius: 5px;
@@ -316,7 +291,6 @@ if (isset($_SESSION['user_id'])) {
             background-color: #0056b3;
         }
 
-        /* Секція авторизації */
         .auth-section {
             display: flex;
             align-items: center;
@@ -341,7 +315,6 @@ if (isset($_SESSION['user_id'])) {
         .auth-section button.logout-btn { background-color: #dc3545; }
         .auth-section button.logout-btn:hover { background-color: #c82333; }
 
-        /* Іконка кошика */
         .cart-link {
             color: white;
             text-decoration: none;
@@ -369,7 +342,6 @@ if (isset($_SESSION['user_id'])) {
             text-align: center;
         }
 
-        /* Анімація кошика */
         .cart-link.bump {
             animation: bump 0.3s ease-out;
         }
@@ -380,7 +352,6 @@ if (isset($_SESSION['user_id'])) {
             100% { transform: scale(1); }
         }
 
-        /* Іконка профілю */
         .profile-link {
             color: white;
             text-decoration: none;
@@ -406,7 +377,6 @@ if (isset($_SESSION['user_id'])) {
             font-size: 1em;
         }
 
-        /* Hero Section */
         .hero {
             position: relative;
             width: 100%;
@@ -453,7 +423,6 @@ if (isset($_SESSION['user_id'])) {
             color: #333;
         }
 
-        /* Carousel */
         .carousel-container {
             position: relative;
             width: 90%;
@@ -466,13 +435,13 @@ if (isset($_SESSION['user_id'])) {
         .slider-track {
             display: flex;
             transition: transform 0.5s ease-in-out;
-            gap: 20px; /* Відстань між книгами */
-            padding-bottom: 20px; /* Для тіней */
+            gap: 20px; 
+            padding-bottom: 20px; 
         }
 
         .book {
-            flex: 0 0 auto; /* Не стискати, не розтягувати, авто ширина */
-            width: 220px; /* Фіксована ширина для книг */
+            flex: 0 0 auto; 
+            width: 220px; 
             background-color: white;
             border-radius: 10px;
             box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
@@ -490,7 +459,7 @@ if (isset($_SESSION['user_id'])) {
 
         .book img {
             max-width: 100%;
-            height: 250px; /* Фіксована висота для обкладинок */
+            height: 250px; 
             object-fit: cover;
             border-radius: 5px;
             margin-bottom: 10px;
@@ -589,47 +558,45 @@ if (isset($_SESSION['user_id'])) {
             background-color: #0056b3;
         }
 
-        /* Footer */
+
         footer {
             background-color: #333;
             color: white;
             text-align: center;
             padding: 20px 0;
-            margin-top: auto; /* Притискає футер до низу сторінки */
+            margin-top: auto; 
         }
 
-        /* СТИЛІ ДЛЯ СТОРІНКИ ПРОФІЛЮ */
         body.genre-default {
             background-color: #f0f0f0;
-            /* background-image: url('images/default_bg.jpg'); */ /* Замініть на реальні шляхи */
             background-size: cover;
             background-attachment: fixed;
             background-position: center;
             color: #333;
         }
-        body.genre-детектив { /* Changed to lowercase */
-            background-image: url('images/backgrounds/detective_bg.jpg'); /* Ваш файл */
+        body.genre-детектив { 
+            background-image: url('images/backgrounds/detective_bg.jpg'); 
             background-size: cover;
             background-attachment: fixed;
             background-position: center;
-            color: #eee; /* Можливо, змінити на світлий, якщо фон темний */
+            color: #eee; 
         }
-        body.genre-фантастика { /* Changed to lowercase */
-            background-image: url('images/backgrounds/fantasy_bg.jpg'); /* Ваш файл */
-            background-size: cover;
-            background-attachment: fixed;
-            background-position: center;
-            color: #eee;
-        }
-        body.genre-наукова-фантастика { /* Changed to lowercase and hyphenated */
-            background-image: url('images/backgrounds/sci-fi_bg.jpg'); /* Ваш файл */
+        body.genre-фантастика { 
+            background-image: url('images/backgrounds/fantasy_bg.jpg');
             background-size: cover;
             background-attachment: fixed;
             background-position: center;
             color: #eee;
         }
-        body.genre-жахи { /* Changed to lowercase */
-            background-image: url('images/backgrounds/horror_bg.jpg'); /* Ваш файл */
+        body.genre-наукова-фантастика { 
+            background-image: url('images/backgrounds/sci-fi_bg.jpg'); 
+            background-size: cover;
+            background-attachment: fixed;
+            background-position: center;
+            color: #eee;
+        }
+        body.genre-жахи { 
+            background-image: url('images/backgrounds/horror_bg.jpg');
             background-size: cover;
             background-attachment: fixed;
             background-position: center;
@@ -655,7 +622,7 @@ if (isset($_SESSION['user_id'])) {
         }
 
         .profile-header {
-            grid-column: 1 / -1; /* Займає всю ширину */
+            grid-column: 1 / -1; 
             text-align: center;
             margin-bottom: 20px;
         }
@@ -708,9 +675,9 @@ if (isset($_SESSION['user_id'])) {
         }
         .chart-container {
             width: 100%;
-            height: 350px; /* Фіксована висота для діаграми */
+            height: 350px; 
             margin: 20px auto 0;
-            display: flex; /* Для центрування */
+            display: flex; 
             justify-content: center;
             align-items: center;
         }
@@ -734,7 +701,6 @@ if (isset($_SESSION['user_id'])) {
         .remove-favorite-btn:hover {
             background-color: #c82333;
         }
-        /* Вже існуючі стилі для wishlist-button, їх можна перенести в styles.css */
         .wishlist-button {
             position: absolute;
             top: 5px;
@@ -793,9 +759,9 @@ if (isset($_SESSION['user_id'])) {
             font-weight: bold;
             pointer-events: auto;
         }
-        /* Рекламні блоки */
+
 .ad-section {
-    grid-column: 1 / -1; /* Займає всю ширину */
+    grid-column: 1 / -1; 
     display: flex;
     flex-wrap: wrap;
     gap: 20px;
@@ -804,7 +770,7 @@ if (isset($_SESSION['user_id'])) {
 }
 
 .ad-banner {
-    background-color: #e9f5ff; /* Легкий блакитний фон для акценту */
+    background-color: #e9f5ff; 
     border: 1px solid #cce5ff;
     border-radius: 10px;
     box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
@@ -812,10 +778,10 @@ if (isset($_SESSION['user_id'])) {
     display: flex;
     align-items: center;
     padding: 15px;
-    max-width: 550px; /* Обмеження ширини для банерів */
+    max-width: 550px; 
     transition: transform 0.3s ease, box-shadow 0.3s ease;
-    text-decoration: none; /* Щоб посилання не було підкреслено */
-    color: inherit; /* Успадковує колір тексту */
+    text-decoration: none; 
+    color: inherit; 
 }
 
 .ad-banner:hover {
@@ -826,7 +792,7 @@ if (isset($_SESSION['user_id'])) {
 .ad-banner.vertical {
     flex-direction: column;
     text-align: center;
-    max-width: 250px; /* Менша ширина для вертикального банера */
+    max-width: 250px;
 }
 
 .ad-banner img {
@@ -841,7 +807,7 @@ if (isset($_SESSION['user_id'])) {
     margin-right: 0;
     margin-bottom: 15px;
     max-width: 100%;
-    height: 180px; /* Фіксована висота для вертикального зображення */
+    height: 180px; 
 }
 
 .ad-content {
