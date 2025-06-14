@@ -1,0 +1,468 @@
+
+[2025-06-14 12:07:58] === NEW REQUEST (START) ===
+[2025-06-14 12:07:58] Request Method: POST
+[2025-06-14 12:07:58] Raw POST Data (php://input): {"id":"2","quantity":1}
+[2025-06-14 12:07:58] Session User ID: 7
+[2025-06-14 12:07:58] Checkpoint: Request method is POST.
+[2025-06-14 12:07:58] Checkpoint: User is logged in. Session User ID: 7
+[2025-06-14 12:07:58] Checkpoint: JSON data parsed. Book ID: 2, Quantity: 1
+[2025-06-14 12:07:58] Checkpoint: Attempting to require files...
+[2025-06-14 12:07:58] Requiring: Connection.php
+[2025-06-14 12:07:58] Required: Connection.php
+[2025-06-14 12:07:58] Requiring: Book.php
+[2025-06-14 12:07:58] Required: Book.php
+[2025-06-14 12:07:58] Requiring: CartItem.php
+[2025-06-14 12:07:58] Required: CartItem.php
+[2025-06-14 12:07:58] Requiring: IBookstoreRepository.php
+[2025-06-14 12:07:58] Required: IBookstoreRepository.php
+[2025-06-14 12:07:58] Requiring: BookstoreRepository.php
+[2025-06-14 12:07:58] Required: BookstoreRepository.php
+[2025-06-14 12:07:58] Requiring: ICartRepository.php
+[2025-06-14 12:07:58] Required: ICartRepository.php
+[2025-06-14 12:07:58] Requiring: CartRepository.php
+[2025-06-14 12:07:58] Required: CartRepository.php
+[2025-06-14 12:07:58] Requiring: CartService.php
+[2025-06-14 12:07:58] Required: CartService.php
+[2025-06-14 12:07:58] Checkpoint: All files required.
+[2025-06-14 12:07:58] Checkpoint: Inside try block. Establishing DB connection.
+[2025-06-14 12:07:58] Checkpoint: DB connection established.
+[2025-06-14 12:07:58] Initializing CartRepository...
+[2025-06-14 12:07:58] CartRepository initialized.
+[2025-06-14 12:07:58] Initializing BookstoreRepository...
+[2025-06-14 12:07:58] BookstoreRepository initialized.
+[2025-06-14 12:07:58] Initializing CartService...
+[2025-06-14 12:07:58] CartService initialized.
+[2025-06-14 12:07:58] Checkpoint: Repositories and Service initialized.
+[2025-06-14 12:07:58] Checkpoint: CartService->addItem called. Result: {"success":true,"message":"Товар успішно додано до кошика!","action":"added"}
+[2025-06-14 12:07:58] Checkpoint: Item added successfully. Total in cart: 1
+[2025-06-14 12:07:58] Headers to be sent: ["X-Powered-By: PHP\/8.0.30","Expires: Thu, 19 Nov 1981 08:52:00 GMT","Cache-Control: no-store, no-cache, must-revalidate","Pragma: no-cache","Content-Type: application\/json; charset=utf-8"]
+[2025-06-14 12:07:58] Response echoed for successful/service fail path.
+
+[2025-06-14 12:17:04] === NEW REQUEST (START) ===
+[2025-06-14 12:17:04] Request Method: POST
+[2025-06-14 12:17:04] Raw POST Data (php://input): {"id":"2","quantity":1}
+[2025-06-14 12:17:04] Session User ID: 7
+[2025-06-14 12:17:04] Checkpoint: Request method is POST.
+[2025-06-14 12:17:04] Checkpoint: User is logged in. Session User ID: 7
+[2025-06-14 12:17:04] Checkpoint: JSON data parsed. Book ID: 2, Quantity: 1
+[2025-06-14 12:17:04] Checkpoint: Attempting to require files...
+[2025-06-14 12:17:04] Requiring: Connection.php
+[2025-06-14 12:17:04] Required: Connection.php
+[2025-06-14 12:17:04] Requiring: Book.php
+[2025-06-14 12:17:04] Required: Book.php
+[2025-06-14 12:17:04] Requiring: CartItem.php
+[2025-06-14 12:17:04] Required: CartItem.php
+[2025-06-14 12:17:04] Requiring: IBookstoreRepository.php
+[2025-06-14 12:17:04] Required: IBookstoreRepository.php
+[2025-06-14 12:17:04] Requiring: BookstoreRepository.php
+[2025-06-14 12:17:04] Required: BookstoreRepository.php
+[2025-06-14 12:17:04] Requiring: ICartRepository.php
+[2025-06-14 12:17:04] Required: ICartRepository.php
+[2025-06-14 12:17:04] Requiring: CartRepository.php
+[2025-06-14 12:17:04] Required: CartRepository.php
+[2025-06-14 12:17:04] Requiring: CartService.php
+[2025-06-14 12:17:04] Required: CartService.php
+[2025-06-14 12:17:04] Checkpoint: All files required.
+[2025-06-14 12:17:04] Checkpoint: Inside try block. Establishing DB connection.
+[2025-06-14 12:17:04] Checkpoint: DB connection established.
+[2025-06-14 12:17:04] Initializing CartRepository...
+[2025-06-14 12:17:04] CartRepository initialized.
+[2025-06-14 12:17:04] Initializing BookstoreRepository...
+[2025-06-14 12:17:04] BookstoreRepository initialized.
+[2025-06-14 12:17:04] Initializing CartService...
+[2025-06-14 12:17:04] CartService initialized.
+[2025-06-14 12:17:04] Checkpoint: Repositories and Service initialized.
+[2025-06-14 12:17:04] Checkpoint: CartService->addItem called. Result: {"success":true,"message":"Товар успішно додано до кошика!","action":"added"}
+[2025-06-14 12:17:04] Checkpoint: Item added successfully. Total in cart: 1
+[2025-06-14 12:17:04] Headers to be sent: ["X-Powered-By: PHP\/8.0.30","Expires: Thu, 19 Nov 1981 08:52:00 GMT","Cache-Control: no-store, no-cache, must-revalidate","Pragma: no-cache","Content-Type: application\/json; charset=utf-8"]
+[2025-06-14 12:17:04] Response echoed for successful/service fail path.
+
+[2025-06-14 12:17:08] === NEW REQUEST (START) ===
+[2025-06-14 12:17:08] Request Method: POST
+[2025-06-14 12:17:08] Raw POST Data (php://input): {"id":"6","quantity":1}
+[2025-06-14 12:17:08] Session User ID: 7
+[2025-06-14 12:17:08] Checkpoint: Request method is POST.
+[2025-06-14 12:17:08] Checkpoint: User is logged in. Session User ID: 7
+[2025-06-14 12:17:08] Checkpoint: JSON data parsed. Book ID: 6, Quantity: 1
+[2025-06-14 12:17:08] Checkpoint: Attempting to require files...
+[2025-06-14 12:17:08] Requiring: Connection.php
+[2025-06-14 12:17:08] Required: Connection.php
+[2025-06-14 12:17:08] Requiring: Book.php
+[2025-06-14 12:17:08] Required: Book.php
+[2025-06-14 12:17:08] Requiring: CartItem.php
+[2025-06-14 12:17:08] Required: CartItem.php
+[2025-06-14 12:17:08] Requiring: IBookstoreRepository.php
+[2025-06-14 12:17:08] Required: IBookstoreRepository.php
+[2025-06-14 12:17:08] Requiring: BookstoreRepository.php
+[2025-06-14 12:17:08] Required: BookstoreRepository.php
+[2025-06-14 12:17:08] Requiring: ICartRepository.php
+[2025-06-14 12:17:08] Required: ICartRepository.php
+[2025-06-14 12:17:08] Requiring: CartRepository.php
+[2025-06-14 12:17:08] Required: CartRepository.php
+[2025-06-14 12:17:08] Requiring: CartService.php
+[2025-06-14 12:17:08] Required: CartService.php
+[2025-06-14 12:17:08] Checkpoint: All files required.
+[2025-06-14 12:17:08] Checkpoint: Inside try block. Establishing DB connection.
+[2025-06-14 12:17:08] Checkpoint: DB connection established.
+[2025-06-14 12:17:08] Initializing CartRepository...
+[2025-06-14 12:17:08] CartRepository initialized.
+[2025-06-14 12:17:08] Initializing BookstoreRepository...
+[2025-06-14 12:17:08] BookstoreRepository initialized.
+[2025-06-14 12:17:08] Initializing CartService...
+[2025-06-14 12:17:08] CartService initialized.
+[2025-06-14 12:17:08] Checkpoint: Repositories and Service initialized.
+[2025-06-14 12:17:08] Checkpoint: CartService->addItem called. Result: {"success":false,"message":"Ви не можете додати більше, ніж є в наявності (доступно: 0).","error":"quantity_limit_exceeded","available_quantity":0}
+[2025-06-14 12:17:08] Checkpoint: Item addition failed by service logic.
+[2025-06-14 12:17:08] Headers to be sent: ["X-Powered-By: PHP\/8.0.30","Expires: Thu, 19 Nov 1981 08:52:00 GMT","Cache-Control: no-store, no-cache, must-revalidate","Pragma: no-cache","Content-Type: application\/json; charset=utf-8"]
+[2025-06-14 12:17:08] Response echoed for successful/service fail path.
+
+[2025-06-14 12:21:50] === NEW REQUEST (START) ===
+[2025-06-14 12:21:50] Request Method: POST
+[2025-06-14 12:21:50] Raw POST Data (php://input): {"id":"48","quantity":1}
+[2025-06-14 12:21:50] Session User ID: 7
+[2025-06-14 12:21:50] Checkpoint: Request method is POST.
+[2025-06-14 12:21:50] Checkpoint: User is logged in. Session User ID: 7
+[2025-06-14 12:21:50] Checkpoint: JSON data parsed. Book ID: 48, Quantity: 1
+[2025-06-14 12:21:50] Checkpoint: Attempting to require files...
+[2025-06-14 12:21:50] Requiring: Connection.php
+[2025-06-14 12:21:50] Required: Connection.php
+[2025-06-14 12:21:50] Requiring: Book.php
+[2025-06-14 12:21:50] Required: Book.php
+[2025-06-14 12:21:50] Requiring: CartItem.php
+[2025-06-14 12:21:50] Required: CartItem.php
+[2025-06-14 12:21:50] Requiring: IBookstoreRepository.php
+[2025-06-14 12:21:50] Required: IBookstoreRepository.php
+[2025-06-14 12:21:50] Requiring: BookstoreRepository.php
+[2025-06-14 12:21:50] Required: BookstoreRepository.php
+[2025-06-14 12:21:50] Requiring: ICartRepository.php
+[2025-06-14 12:21:50] Required: ICartRepository.php
+[2025-06-14 12:21:50] Requiring: CartRepository.php
+[2025-06-14 12:21:50] Required: CartRepository.php
+[2025-06-14 12:21:50] Requiring: CartService.php
+[2025-06-14 12:21:50] Required: CartService.php
+[2025-06-14 12:21:50] Checkpoint: All files required.
+[2025-06-14 12:21:50] Checkpoint: Inside try block. Establishing DB connection.
+[2025-06-14 12:21:50] Checkpoint: DB connection established.
+[2025-06-14 12:21:50] Initializing CartRepository...
+[2025-06-14 12:21:50] CartRepository initialized.
+[2025-06-14 12:21:50] Initializing BookstoreRepository...
+[2025-06-14 12:21:50] BookstoreRepository initialized.
+[2025-06-14 12:21:50] Initializing CartService...
+[2025-06-14 12:21:50] CartService initialized.
+[2025-06-14 12:21:50] Checkpoint: Repositories and Service initialized.
+[2025-06-14 12:21:50] Checkpoint: CartService->addItem called. Result: {"success":true,"message":"Товар успішно додано до кошика!","action":"added"}
+[2025-06-14 12:21:50] Checkpoint: Item added successfully. Total in cart: 2
+[2025-06-14 12:21:50] Headers to be sent: ["X-Powered-By: PHP\/8.0.30","Expires: Thu, 19 Nov 1981 08:52:00 GMT","Cache-Control: no-store, no-cache, must-revalidate","Pragma: no-cache","Content-Type: application\/json; charset=utf-8"]
+[2025-06-14 12:21:50] Response echoed for successful/service fail path.
+
+[2025-06-14 12:24:18] === NEW REQUEST (START) ===
+[2025-06-14 12:24:18] Request Method: POST
+[2025-06-14 12:24:18] Raw POST Data (php://input): {"id":"7","quantity":1}
+[2025-06-14 12:24:18] Session User ID: 7
+[2025-06-14 12:24:18] Checkpoint: Request method is POST.
+[2025-06-14 12:24:18] Checkpoint: User is logged in. Session User ID: 7
+[2025-06-14 12:24:18] Checkpoint: JSON data parsed. Book ID: 7, Quantity: 1
+[2025-06-14 12:24:18] Checkpoint: Attempting to require files...
+[2025-06-14 12:24:18] Requiring: Connection.php
+[2025-06-14 12:24:18] Required: Connection.php
+[2025-06-14 12:24:18] Requiring: Book.php
+[2025-06-14 12:24:18] Required: Book.php
+[2025-06-14 12:24:18] Requiring: CartItem.php
+[2025-06-14 12:24:18] Required: CartItem.php
+[2025-06-14 12:24:18] Requiring: IBookstoreRepository.php
+[2025-06-14 12:24:18] Required: IBookstoreRepository.php
+[2025-06-14 12:24:18] Requiring: BookstoreRepository.php
+[2025-06-14 12:24:18] Required: BookstoreRepository.php
+[2025-06-14 12:24:18] Requiring: ICartRepository.php
+[2025-06-14 12:24:18] Required: ICartRepository.php
+[2025-06-14 12:24:18] Requiring: CartRepository.php
+[2025-06-14 12:24:18] Required: CartRepository.php
+[2025-06-14 12:24:18] Requiring: CartService.php
+[2025-06-14 12:24:18] Required: CartService.php
+[2025-06-14 12:24:18] Checkpoint: All files required.
+[2025-06-14 12:24:18] Checkpoint: Inside try block. Establishing DB connection.
+[2025-06-14 12:24:18] Checkpoint: DB connection established.
+[2025-06-14 12:24:18] Initializing CartRepository...
+[2025-06-14 12:24:18] CartRepository initialized.
+[2025-06-14 12:24:18] Initializing BookstoreRepository...
+[2025-06-14 12:24:18] BookstoreRepository initialized.
+[2025-06-14 12:24:18] Initializing CartService...
+[2025-06-14 12:24:18] CartService initialized.
+[2025-06-14 12:24:18] Checkpoint: Repositories and Service initialized.
+[2025-06-14 12:24:18] Checkpoint: CartService->addItem called. Result: {"success":true,"message":"Товар успішно додано до кошика!","action":"added"}
+[2025-06-14 12:24:18] Checkpoint: Item added successfully. Total in cart: 1
+[2025-06-14 12:24:18] Headers to be sent: ["X-Powered-By: PHP\/8.0.30","Expires: Thu, 19 Nov 1981 08:52:00 GMT","Cache-Control: no-store, no-cache, must-revalidate","Pragma: no-cache","Content-Type: application\/json; charset=utf-8"]
+[2025-06-14 12:24:18] Response echoed for successful/service fail path.
+
+[2025-06-14 12:40:56] === NEW REQUEST (START) ===
+[2025-06-14 12:40:56] Request Method: POST
+[2025-06-14 12:40:56] Raw POST Data (php://input): {"id":"22","quantity":1}
+[2025-06-14 12:40:56] Session User ID: 7
+[2025-06-14 12:40:56] Checkpoint: Request method is POST.
+[2025-06-14 12:40:56] Checkpoint: User is logged in. Session User ID: 7
+[2025-06-14 12:40:56] Checkpoint: JSON data parsed. Book ID: 22, Quantity: 1
+[2025-06-14 12:40:56] Checkpoint: Attempting to require files...
+[2025-06-14 12:40:56] Requiring: Connection.php
+[2025-06-14 12:40:56] Required: Connection.php
+[2025-06-14 12:40:56] Requiring: Book.php
+[2025-06-14 12:40:56] Required: Book.php
+[2025-06-14 12:40:56] Requiring: CartItem.php
+[2025-06-14 12:40:56] Required: CartItem.php
+[2025-06-14 12:40:56] Requiring: IBookstoreRepository.php
+[2025-06-14 12:40:56] Required: IBookstoreRepository.php
+[2025-06-14 12:40:56] Requiring: BookstoreRepository.php
+[2025-06-14 12:40:56] Required: BookstoreRepository.php
+[2025-06-14 12:40:56] Requiring: ICartRepository.php
+[2025-06-14 12:40:56] Required: ICartRepository.php
+[2025-06-14 12:40:56] Requiring: CartRepository.php
+[2025-06-14 12:40:56] Required: CartRepository.php
+[2025-06-14 12:40:56] Requiring: CartService.php
+[2025-06-14 12:40:56] Required: CartService.php
+[2025-06-14 12:40:56] Checkpoint: All files required.
+[2025-06-14 12:40:56] Checkpoint: Inside try block. Establishing DB connection.
+[2025-06-14 12:40:56] Checkpoint: DB connection established.
+[2025-06-14 12:40:56] Initializing CartRepository...
+[2025-06-14 12:40:56] CartRepository initialized.
+[2025-06-14 12:40:56] Initializing BookstoreRepository...
+[2025-06-14 12:40:56] BookstoreRepository initialized.
+[2025-06-14 12:40:56] Initializing CartService...
+[2025-06-14 12:40:56] CartService initialized.
+[2025-06-14 12:40:56] Checkpoint: Repositories and Service initialized.
+[2025-06-14 12:40:56] Checkpoint: CartService->addItem called. Result: {"success":true,"message":"Товар успішно додано до кошика!","action":"added"}
+[2025-06-14 12:40:56] Checkpoint: Item added successfully. Total in cart: 1
+[2025-06-14 12:40:56] Headers to be sent: ["X-Powered-By: PHP\/8.0.30","Expires: Thu, 19 Nov 1981 08:52:00 GMT","Cache-Control: no-store, no-cache, must-revalidate","Pragma: no-cache","Content-Type: application\/json; charset=utf-8"]
+[2025-06-14 12:40:56] Response echoed for successful/service fail path.
+
+[2025-06-14 12:46:33] === NEW REQUEST (START) ===
+[2025-06-14 12:46:33] Request Method: POST
+[2025-06-14 12:46:33] Raw POST Data (php://input): {"id":"2","quantity":1}
+[2025-06-14 12:46:33] Session User ID: 7
+[2025-06-14 12:46:33] Checkpoint: Request method is POST.
+[2025-06-14 12:46:33] Checkpoint: User is logged in. Session User ID: 7
+[2025-06-14 12:46:33] Checkpoint: JSON data parsed. Book ID: 2, Quantity: 1
+[2025-06-14 12:46:33] Checkpoint: Attempting to require files...
+[2025-06-14 12:46:33] Requiring: Connection.php
+[2025-06-14 12:46:33] Required: Connection.php
+[2025-06-14 12:46:33] Requiring: Book.php
+[2025-06-14 12:46:33] Required: Book.php
+[2025-06-14 12:46:33] Requiring: CartItem.php
+[2025-06-14 12:46:33] Required: CartItem.php
+[2025-06-14 12:46:33] Requiring: IBookstoreRepository.php
+[2025-06-14 12:46:33] Required: IBookstoreRepository.php
+[2025-06-14 12:46:33] Requiring: BookstoreRepository.php
+[2025-06-14 12:46:33] Required: BookstoreRepository.php
+[2025-06-14 12:46:33] Requiring: ICartRepository.php
+[2025-06-14 12:46:33] Required: ICartRepository.php
+[2025-06-14 12:46:33] Requiring: CartRepository.php
+[2025-06-14 12:46:33] Required: CartRepository.php
+[2025-06-14 12:46:33] Requiring: CartService.php
+[2025-06-14 12:46:33] Required: CartService.php
+[2025-06-14 12:46:33] Checkpoint: All files required.
+[2025-06-14 12:46:33] Checkpoint: Inside try block. Establishing DB connection.
+[2025-06-14 12:46:33] Checkpoint: DB connection established.
+[2025-06-14 12:46:33] Initializing CartRepository...
+[2025-06-14 12:46:33] CartRepository initialized.
+[2025-06-14 12:46:33] Initializing BookstoreRepository...
+[2025-06-14 12:46:33] BookstoreRepository initialized.
+[2025-06-14 12:46:33] Initializing CartService...
+[2025-06-14 12:46:33] CartService initialized.
+[2025-06-14 12:46:33] Checkpoint: Repositories and Service initialized.
+[2025-06-14 12:46:33] Checkpoint: CartService->addItem called. Result: {"success":true,"message":"Товар успішно додано до кошика!","action":"added"}
+[2025-06-14 12:46:33] Checkpoint: Item added successfully. Total in cart: 2
+[2025-06-14 12:46:33] Headers to be sent: ["X-Powered-By: PHP\/8.0.30","Expires: Thu, 19 Nov 1981 08:52:00 GMT","Cache-Control: no-store, no-cache, must-revalidate","Pragma: no-cache","Content-Type: application\/json; charset=utf-8"]
+[2025-06-14 12:46:33] Response echoed for successful/service fail path.
+
+[2025-06-14 12:52:29] === NEW REQUEST (START) ===
+[2025-06-14 12:52:29] Request Method: POST
+[2025-06-14 12:52:29] Raw POST Data (php://input): {"id":"7","quantity":1}
+[2025-06-14 12:52:29] Session User ID: 7
+[2025-06-14 12:52:29] Checkpoint: Request method is POST.
+[2025-06-14 12:52:29] Checkpoint: User is logged in. Session User ID: 7
+[2025-06-14 12:52:29] Checkpoint: JSON data parsed. Book ID: 7, Quantity: 1
+[2025-06-14 12:52:29] Checkpoint: Attempting to require files...
+[2025-06-14 12:52:29] Requiring: Connection.php
+[2025-06-14 12:52:29] Required: Connection.php
+[2025-06-14 12:52:29] Requiring: Book.php
+[2025-06-14 12:52:29] Required: Book.php
+[2025-06-14 12:52:29] Requiring: CartItem.php
+[2025-06-14 12:52:29] Required: CartItem.php
+[2025-06-14 12:52:29] Requiring: IBookstoreRepository.php
+[2025-06-14 12:52:29] Required: IBookstoreRepository.php
+[2025-06-14 12:52:29] Requiring: BookstoreRepository.php
+[2025-06-14 12:52:29] Required: BookstoreRepository.php
+[2025-06-14 12:52:29] Requiring: ICartRepository.php
+[2025-06-14 12:52:29] Required: ICartRepository.php
+[2025-06-14 12:52:29] Requiring: CartRepository.php
+[2025-06-14 12:52:29] Required: CartRepository.php
+[2025-06-14 12:52:29] Requiring: CartService.php
+[2025-06-14 12:52:29] Required: CartService.php
+[2025-06-14 12:52:29] Checkpoint: All files required.
+[2025-06-14 12:52:29] Checkpoint: Inside try block. Establishing DB connection.
+[2025-06-14 12:52:29] Checkpoint: DB connection established.
+[2025-06-14 12:52:29] Initializing CartRepository...
+[2025-06-14 12:52:29] CartRepository initialized.
+[2025-06-14 12:52:29] Initializing BookstoreRepository...
+[2025-06-14 12:52:29] BookstoreRepository initialized.
+[2025-06-14 12:52:29] Initializing CartService...
+[2025-06-14 12:52:29] CartService initialized.
+[2025-06-14 12:52:29] Checkpoint: Repositories and Service initialized.
+[2025-06-14 12:52:29] Checkpoint: CartService->addItem called. Result: {"success":true,"message":"Товар успішно додано до кошика!","action":"added"}
+[2025-06-14 12:52:29] Checkpoint: Item added successfully. Total in cart: 1
+[2025-06-14 12:52:29] Headers to be sent: ["X-Powered-By: PHP\/8.0.30","Expires: Thu, 19 Nov 1981 08:52:00 GMT","Cache-Control: no-store, no-cache, must-revalidate","Pragma: no-cache","Content-Type: application\/json; charset=utf-8"]
+[2025-06-14 12:52:29] Response echoed for successful/service fail path.
+
+[2025-06-14 12:52:35] === NEW REQUEST (START) ===
+[2025-06-14 12:52:35] Request Method: POST
+[2025-06-14 12:52:35] Raw POST Data (php://input): {"id":"2","quantity":1}
+[2025-06-14 12:52:35] Session User ID: 7
+[2025-06-14 12:52:35] Checkpoint: Request method is POST.
+[2025-06-14 12:52:35] Checkpoint: User is logged in. Session User ID: 7
+[2025-06-14 12:52:35] Checkpoint: JSON data parsed. Book ID: 2, Quantity: 1
+[2025-06-14 12:52:35] Checkpoint: Attempting to require files...
+[2025-06-14 12:52:35] Requiring: Connection.php
+[2025-06-14 12:52:35] Required: Connection.php
+[2025-06-14 12:52:35] Requiring: Book.php
+[2025-06-14 12:52:35] Required: Book.php
+[2025-06-14 12:52:35] Requiring: CartItem.php
+[2025-06-14 12:52:35] Required: CartItem.php
+[2025-06-14 12:52:35] Requiring: IBookstoreRepository.php
+[2025-06-14 12:52:35] Required: IBookstoreRepository.php
+[2025-06-14 12:52:35] Requiring: BookstoreRepository.php
+[2025-06-14 12:52:35] Required: BookstoreRepository.php
+[2025-06-14 12:52:35] Requiring: ICartRepository.php
+[2025-06-14 12:52:35] Required: ICartRepository.php
+[2025-06-14 12:52:35] Requiring: CartRepository.php
+[2025-06-14 12:52:35] Required: CartRepository.php
+[2025-06-14 12:52:35] Requiring: CartService.php
+[2025-06-14 12:52:35] Required: CartService.php
+[2025-06-14 12:52:35] Checkpoint: All files required.
+[2025-06-14 12:52:35] Checkpoint: Inside try block. Establishing DB connection.
+[2025-06-14 12:52:35] Checkpoint: DB connection established.
+[2025-06-14 12:52:35] Initializing CartRepository...
+[2025-06-14 12:52:35] CartRepository initialized.
+[2025-06-14 12:52:35] Initializing BookstoreRepository...
+[2025-06-14 12:52:35] BookstoreRepository initialized.
+[2025-06-14 12:52:35] Initializing CartService...
+[2025-06-14 12:52:35] CartService initialized.
+[2025-06-14 12:52:35] Checkpoint: Repositories and Service initialized.
+[2025-06-14 12:52:35] Checkpoint: CartService->addItem called. Result: {"success":true,"message":"Товар успішно додано до кошика!","action":"added"}
+[2025-06-14 12:52:35] Checkpoint: Item added successfully. Total in cart: 2
+[2025-06-14 12:52:35] Headers to be sent: ["X-Powered-By: PHP\/8.0.30","Expires: Thu, 19 Nov 1981 08:52:00 GMT","Cache-Control: no-store, no-cache, must-revalidate","Pragma: no-cache","Content-Type: application\/json; charset=utf-8"]
+[2025-06-14 12:52:35] Response echoed for successful/service fail path.
+
+[2025-06-14 12:52:39] === NEW REQUEST (START) ===
+[2025-06-14 12:52:39] Request Method: POST
+[2025-06-14 12:52:39] Raw POST Data (php://input): {"id":"1","quantity":1}
+[2025-06-14 12:52:39] Session User ID: 7
+[2025-06-14 12:52:39] Checkpoint: Request method is POST.
+[2025-06-14 12:52:39] Checkpoint: User is logged in. Session User ID: 7
+[2025-06-14 12:52:39] Checkpoint: JSON data parsed. Book ID: 1, Quantity: 1
+[2025-06-14 12:52:39] Checkpoint: Attempting to require files...
+[2025-06-14 12:52:39] Requiring: Connection.php
+[2025-06-14 12:52:39] Required: Connection.php
+[2025-06-14 12:52:39] Requiring: Book.php
+[2025-06-14 12:52:39] Required: Book.php
+[2025-06-14 12:52:39] Requiring: CartItem.php
+[2025-06-14 12:52:39] Required: CartItem.php
+[2025-06-14 12:52:39] Requiring: IBookstoreRepository.php
+[2025-06-14 12:52:39] Required: IBookstoreRepository.php
+[2025-06-14 12:52:39] Requiring: BookstoreRepository.php
+[2025-06-14 12:52:39] Required: BookstoreRepository.php
+[2025-06-14 12:52:39] Requiring: ICartRepository.php
+[2025-06-14 12:52:39] Required: ICartRepository.php
+[2025-06-14 12:52:39] Requiring: CartRepository.php
+[2025-06-14 12:52:39] Required: CartRepository.php
+[2025-06-14 12:52:39] Requiring: CartService.php
+[2025-06-14 12:52:39] Required: CartService.php
+[2025-06-14 12:52:39] Checkpoint: All files required.
+[2025-06-14 12:52:39] Checkpoint: Inside try block. Establishing DB connection.
+[2025-06-14 12:52:39] Checkpoint: DB connection established.
+[2025-06-14 12:52:39] Initializing CartRepository...
+[2025-06-14 12:52:39] CartRepository initialized.
+[2025-06-14 12:52:39] Initializing BookstoreRepository...
+[2025-06-14 12:52:39] BookstoreRepository initialized.
+[2025-06-14 12:52:39] Initializing CartService...
+[2025-06-14 12:52:39] CartService initialized.
+[2025-06-14 12:52:39] Checkpoint: Repositories and Service initialized.
+[2025-06-14 12:52:39] Checkpoint: CartService->addItem called. Result: {"success":true,"message":"Товар успішно додано до кошика!","action":"added"}
+[2025-06-14 12:52:39] Checkpoint: Item added successfully. Total in cart: 3
+[2025-06-14 12:52:39] Headers to be sent: ["X-Powered-By: PHP\/8.0.30","Expires: Thu, 19 Nov 1981 08:52:00 GMT","Cache-Control: no-store, no-cache, must-revalidate","Pragma: no-cache","Content-Type: application\/json; charset=utf-8"]
+[2025-06-14 12:52:39] Response echoed for successful/service fail path.
+
+[2025-06-14 13:20:42] === NEW REQUEST (START) ===
+[2025-06-14 13:20:42] Request Method: POST
+[2025-06-14 13:20:42] Raw POST Data (php://input): {"id":"2","quantity":1}
+[2025-06-14 13:20:42] Session User ID: 7
+[2025-06-14 13:20:42] Checkpoint: Request method is POST.
+[2025-06-14 13:20:42] Checkpoint: User is logged in. Session User ID: 7
+[2025-06-14 13:20:42] Checkpoint: JSON data parsed. Book ID: 2, Quantity: 1
+[2025-06-14 13:20:42] Checkpoint: Attempting to require files...
+[2025-06-14 13:20:42] Requiring: Connection.php
+[2025-06-14 13:20:42] Required: Connection.php
+[2025-06-14 13:20:42] Requiring: Book.php
+[2025-06-14 13:20:42] Required: Book.php
+[2025-06-14 13:20:42] Requiring: CartItem.php
+[2025-06-14 13:20:42] Required: CartItem.php
+[2025-06-14 13:20:42] Requiring: IBookstoreRepository.php
+[2025-06-14 13:20:42] Required: IBookstoreRepository.php
+[2025-06-14 13:20:42] Requiring: BookstoreRepository.php
+[2025-06-14 13:20:42] Required: BookstoreRepository.php
+[2025-06-14 13:20:42] Requiring: ICartRepository.php
+[2025-06-14 13:20:42] Required: ICartRepository.php
+[2025-06-14 13:20:42] Requiring: CartRepository.php
+[2025-06-14 13:20:42] Required: CartRepository.php
+[2025-06-14 13:20:42] Requiring: CartService.php
+[2025-06-14 13:20:42] Required: CartService.php
+[2025-06-14 13:20:42] Checkpoint: All files required.
+[2025-06-14 13:20:42] Checkpoint: Inside try block. Establishing DB connection.
+[2025-06-14 13:20:42] Checkpoint: DB connection established.
+[2025-06-14 13:20:42] Initializing CartRepository...
+[2025-06-14 13:20:42] CartRepository initialized.
+[2025-06-14 13:20:42] Initializing BookstoreRepository...
+[2025-06-14 13:20:42] BookstoreRepository initialized.
+[2025-06-14 13:20:42] Initializing CartService...
+[2025-06-14 13:20:42] CartService initialized.
+[2025-06-14 13:20:42] Checkpoint: Repositories and Service initialized.
+[2025-06-14 13:20:42] Checkpoint: CartService->addItem called. Result: {"success":true,"message":"Товар успішно додано до кошика!","action":"added"}
+[2025-06-14 13:20:42] Checkpoint: Item added successfully. Total in cart: 1
+[2025-06-14 13:20:42] Headers to be sent: ["X-Powered-By: PHP\/8.0.30","Expires: Thu, 19 Nov 1981 08:52:00 GMT","Cache-Control: no-store, no-cache, must-revalidate","Pragma: no-cache","Content-Type: application\/json; charset=utf-8"]
+[2025-06-14 13:20:42] Response echoed for successful/service fail path.
+
+[2025-06-14 13:22:08] === NEW REQUEST (START) ===
+[2025-06-14 13:22:08] Request Method: POST
+[2025-06-14 13:22:08] Raw POST Data (php://input): {"id":"7","quantity":1}
+[2025-06-14 13:22:08] Session User ID: 7
+[2025-06-14 13:22:08] Checkpoint: Request method is POST.
+[2025-06-14 13:22:08] Checkpoint: User is logged in. Session User ID: 7
+[2025-06-14 13:22:08] Checkpoint: JSON data parsed. Book ID: 7, Quantity: 1
+[2025-06-14 13:22:08] Checkpoint: Attempting to require files...
+[2025-06-14 13:22:08] Requiring: Connection.php
+[2025-06-14 13:22:08] Required: Connection.php
+[2025-06-14 13:22:08] Requiring: Book.php
+[2025-06-14 13:22:08] Required: Book.php
+[2025-06-14 13:22:08] Requiring: CartItem.php
+[2025-06-14 13:22:08] Required: CartItem.php
+[2025-06-14 13:22:08] Requiring: IBookstoreRepository.php
+[2025-06-14 13:22:08] Required: IBookstoreRepository.php
+[2025-06-14 13:22:08] Requiring: BookstoreRepository.php
+[2025-06-14 13:22:08] Required: BookstoreRepository.php
+[2025-06-14 13:22:08] Requiring: ICartRepository.php
+[2025-06-14 13:22:08] Required: ICartRepository.php
+[2025-06-14 13:22:08] Requiring: CartRepository.php
+[2025-06-14 13:22:08] Required: CartRepository.php
+[2025-06-14 13:22:08] Requiring: CartService.php
+[2025-06-14 13:22:08] Required: CartService.php
+[2025-06-14 13:22:08] Checkpoint: All files required.
+[2025-06-14 13:22:08] Checkpoint: Inside try block. Establishing DB connection.
+[2025-06-14 13:22:08] Checkpoint: DB connection established.
+[2025-06-14 13:22:08] Initializing CartRepository...
+[2025-06-14 13:22:08] CartRepository initialized.
+[2025-06-14 13:22:08] Initializing BookstoreRepository...
+[2025-06-14 13:22:08] BookstoreRepository initialized.
+[2025-06-14 13:22:08] Initializing CartService...
+[2025-06-14 13:22:08] CartService initialized.
+[2025-06-14 13:22:08] Checkpoint: Repositories and Service initialized.
+[2025-06-14 13:22:08] Checkpoint: CartService->addItem called. Result: {"success":true,"message":"Товар успішно додано до кошика!","action":"added"}
+[2025-06-14 13:22:08] Checkpoint: Item added successfully. Total in cart: 1
+[2025-06-14 13:22:08] Headers to be sent: ["X-Powered-By: PHP\/8.0.30","Expires: Thu, 19 Nov 1981 08:52:00 GMT","Cache-Control: no-store, no-cache, must-revalidate","Pragma: no-cache","Content-Type: application\/json; charset=utf-8"]
+[2025-06-14 13:22:08] Response echoed for successful/service fail path.
