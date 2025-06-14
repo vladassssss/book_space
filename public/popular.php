@@ -158,7 +158,6 @@ if (isset($_SESSION['user_id'])) {
             box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
         }
 
-        /* --- СТИЛІ ДЛЯ ЦЕНТРУВАННЯ ЦІНИ --- */
         .book-prices {
             display: flex;
             flex-direction: column;
@@ -166,40 +165,34 @@ if (isset($_SESSION['user_id'])) {
             width: 100%;
         }
 
-        /* Стилі для обкладинки книги */
         .book-cover-container {
             position: relative;
             width: 100%;
             overflow: hidden;
         }
 
-        /* Стилі для інформаційного блоку книги */
         .book-info {
             text-align: center;
             align-items: center;
         }
 
-        /* --- НОВІ СТИЛІ ДЛЯ ПЛАВНОЇ ПОЯВИ КНОПКИ --- */
         .book-actions {
-            /* Початковий стан: приховано */
             opacity: 0;
-            transform: translateY(10px); /* Зміщення кнопки вниз */
-            transition: opacity 0.3s ease, transform 0.3s ease; /* Плавний перехід */
-            padding-bottom: 15px; /* Забезпечуємо відступ знизу, коли кнопка з'явиться */
-            width: 100%; /* Щоб кнопка займала всю ширину картки для центрування */
+            transform: translateY(10px); 
+            transition: opacity 0.3s ease, transform 0.3s ease; 
+            padding-bottom: 15px; 
+            width: 100%; 
             display: flex;
-            justify-content: center; /* Центруємо кнопку по горизонталі */
+            justify-content: center; 
         }
 
         .popular-book-item.book:hover .book-actions {
-            /* При наведенні: показуємо та піднімаємо */
             opacity: 1;
             transform: translateY(0);
         }
 
         .order-button {
-            /* Додаткові стилі для самої кнопки, якщо потрібно */
-            background-color: #007bff; /* Приклад кольору */
+            background-color: #007bff; 
             color: white;
             border: none;
             border-radius: 5px;
@@ -217,7 +210,6 @@ if (isset($_SESSION['user_id'])) {
             background-color: #cccccc;
             cursor: not-allowed;
         }
-        /* --- КІНЕЦЬ НОВИХ СТИЛІВ --- */
 
        
     </style>
